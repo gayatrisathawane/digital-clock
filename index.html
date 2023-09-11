@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>time clock</title>
+    <link  rel="stylesheet" href="style.css"/>
+
+</head>
+<body>
+    <div class="hero">
+        <h1 class="text">DIGITAL CLOCK</h1>
+        <div class="container">
+            <div class="clock">
+                <span id="hh" class="time">hh</span>
+                <span>:</span>
+                <span id="mm" class="time">mm</span>
+                <span>:</span>
+                <span id="ss" class="time">ss</span>
+              
+            </div>
+       </div>
+
+    </div>
+   <script>
+    function timedisplay()
+    {
+        let time = new Date()
+
+        document.getElementById('hh').innerHTML=time.getHours();
+        document.getElementById('mm').innerHTML=time.getMinutes();
+        document.getElementById('ss').innerHTML=time.getSeconds();
+    }
+   setInterval(() => {
+    timedisplay()
+   }, 1000);
+   </script>
+</body>
+</html>
